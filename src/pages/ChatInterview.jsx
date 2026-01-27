@@ -10,6 +10,7 @@ function ChatInterview() {
     const [questions, setQuestions] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [answers, setAnswers] = useState([]);
+    const [isFinished, setIsFinished] = useState(false);
 
     const chatEndRef = useRef(null);
     const location = useLocation();
@@ -119,6 +120,8 @@ function ChatInterview() {
             }, 800);
         } else {
             setTimeout(async () => {
+                setIsFinished(true);
+                
                 setMessages((prev) => [
                     ...prev,
                     {
@@ -152,7 +155,7 @@ function ChatInterview() {
     return (
         <div className='fixed top-0 left-0 h-[100dvh] w-full flex flex-col overflow-hidden bg-gray-50'>
             <div className='flex-none bg-[#4B42D6] text-white px-6 py-4 text-lg font-semibold shadow-md z-10'>
-                Proses Wawancara
+               {isFinished ? "Wawancara telah Selesai" : "Proses Wawancara Dimulai"}
             </div>
 
             <div className='flex-1 overflow-y-auto p-4 space-y-3'>
@@ -166,13 +169,16 @@ function ChatInterview() {
                 ))}
                 <div ref={chatEndRef} />
             </div>
-            <div className='flex-none pb-safe'>
-                <ChatInput
-                    value={input}
-                    onChange={setInput}
-                    onSend={sendMessage}
-                />
-            </div>
+
+            {!isFinished && (
+                <div className='flex-none pb-safe'>
+                    <ChatInput
+                        value={input}
+                        onChange={setInput}
+                        onSend={sendMessage}
+                    />
+                </div>
+            )}
         </div>
     )
 }
