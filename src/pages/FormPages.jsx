@@ -59,6 +59,7 @@ function FormPages() {
                     <input
                         type="text"
                         name="fullName"
+                        required
                         onChange={handleChange}
                         className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-[#FEBD5A] bg-white"
                         placeholder="Nama Lengkap"
@@ -70,6 +71,7 @@ function FormPages() {
                     <input
                         type="text"
                         name="nickName"
+                        required
                         onChange={handleChange}
                         className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-[#FEBD5A] bg-white"
                         placeholder="Nama Panggilan"
@@ -81,6 +83,7 @@ function FormPages() {
                     <input
                         type="email"
                         name="email"
+                        required
                         onChange={handleChange}
                         className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-[#FEBD5A] bg-white"
                         placeholder="example@gmail.com"
@@ -92,6 +95,7 @@ function FormPages() {
                     <input
                         type="number"
                         name="number"
+                        required
                         onChange={handleChange}
                         className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-[#FEBD5A] bg-white"
                         placeholder="08xxxxxxxxxx"
