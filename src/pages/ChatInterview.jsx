@@ -150,8 +150,8 @@ function ChatInterview() {
     }, [messages]);
 
     return (
-        <div className='h-screen w-full flex flex-col'>
-            <div className='bg-[#4B42D6] text-white px-6 py-4 text-lg font-semibold'>
+        <div className='h-screen w-full flex flex-col overflow-hidden bg-gray-50'>
+            <div className='bg-[#4B42D6] text-white px-6 py-4 text-lg font-semibold shadow-md z-10'>
                 Proses Wawancara Dimulai
             </div>
 
