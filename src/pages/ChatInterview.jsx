@@ -151,7 +151,7 @@ function ChatInterview() {
 
     return (
         <div className='h-screen w-full flex flex-col overflow-hidden bg-gray-50'>
-            <div className='bg-[#4B42D6] text-white px-6 py-4 text-lg font-semibold shadow-md z-10'>
+            <div className='flex-none bg-[#4B42D6] text-white px-6 py-4 text-lg font-semibold shadow-md z-10'>
                 Proses Wawancara Dimulai
             </div>
 
@@ -166,12 +166,13 @@ function ChatInterview() {
                 ))}
                 <div ref={chatEndRef} />
             </div>
-
-            <ChatInput
-                value={input}
-                onChange={setInput}
-                onSend={sendMessage}
-            />
+            <div className='flex-none'>
+                <ChatInput
+                    value={input}
+                    onChange={setInput}
+                    onSend={sendMessage}
+                />
+            </div>
         </div>
     )
 }
