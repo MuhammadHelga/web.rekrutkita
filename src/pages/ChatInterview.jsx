@@ -177,7 +177,7 @@ function ChatInterview() {
             </div>
 
             {!isFinished && (
-                <div className='flex-none pb-safe'>
+                <div className='fixed bottom-0 left-0 w-full'>
                     <ChatInput
                         value={input}
                         onChange={setInput}
