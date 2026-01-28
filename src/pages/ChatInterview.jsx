@@ -154,7 +154,7 @@ function ChatInterview() {
 
     return (
         <div className='fixed top-0 left-0 h-[100dvh] w-full flex flex-col overflow-hidden bg-gray-50'>
-            <div className={`flex-none bg-[#4B42D6] text-white px-6 py-4 text-lg font-semibold shadow-md z-10 transition-colors duration-500 
+            <div className={`flex-none bg-[#4B42D6] px-6 py-4 text-lg font-semibold shadow-md z-10 transition-colors duration-500 
                 ${ isFinished ? "text-[#22c55e]" : "text-[#FEBD5A]" }`
             }>
                {isFinished ? "Wawancara telah Selesai" : "Proses Wawancara Dimulai"}
