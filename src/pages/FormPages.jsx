@@ -48,81 +48,93 @@ function FormPages() {
     };
 
     return (
-        <div className=' bg-[#0D3556] h-screen w-full items-center justify-center px-10 py-15'>
-            <div className='w-full bg-transparent'>
-                <h1 className='text-center text-white text-3xl font-bold mb-8'>REKRUTMEN</h1>
+        <div className='min-h-screen flex flex-col bg-white'>
+            <div className='bg-linear-to-b from-[#0D2B45] to-[#1a4b7a] w-full pt-16 pb-12 px-5 flex flex-col'>
+                <h1 className='text-white text-3xl font-bold tracking-[0.2em] mb-4'
+                    >REKRUTMEN
+                </h1>
+
+                <p className="text-blue-100 max-w-md text-sm md:text-base mb-6">
+                    Silakan lengkapi formulir di bawah ini untuk memulai proses wawancara
+                </p>
+
+                <div className="w-16 h-1.5 bg-[#FEBD5A] rounded-full"></div>
             </div>
 
-            <form onSubmit={handleSubmit}>
-                <div className='mb-5'>
-                    <label className='text-white text-sm'>Nama Lengkap</label>
-                    <input
-                        type="text"
-                        name="fullName"
-                        required
-                        onChange={handleChange}
-                        className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-[#FEBD5A] bg-white"
-                        placeholder="Nama Lengkap"
-                    />
-                </div>
-
-                <div className='mb-5'>
-                    <label className='text-white text-sm'>Nama Panggilan</label>
-                    <input
-                        type="text"
-                        name="nickName"
-                        required
-                        onChange={handleChange}
-                        className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-[#FEBD5A] bg-white"
-                        placeholder="Nama Panggilan"
-                    />
-                </div>
-
-                <div className='mb-5'>
-                    <label className='text-white text-sm'>Email</label>
-                    <input
-                        type="email"
-                        name="email"
-                        required
-                        onChange={handleChange}
-                        className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-[#FEBD5A] bg-white"
-                        placeholder="example@gmail.com"
-                    />
-                </div>
-
-                <div className='mb-5'>
-                    <label className='text-white text-sm'>No. HP/Whatsapp</label>
-                    <input
-                        type="number"
-                        name="number"
-                        required
-                        onChange={handleChange}
-                        className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-[#FEBD5A] bg-white"
-                        placeholder="08xxxxxxxxxx"
-                    />
-                </div>
-
-                <div className='grid grid-cols-2 gap-x-10 mb-10'>
-                        <div>
-                            <label className='text-white text-sm'>Jenis Kelamin</label>
-                            <select className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-[#FEBD5A] bg-white" name="gender" value={form.gender} onChange={handleChange}>
-                                <option value="Laki-Laki">Laki-Laki</option>
-                                <option value="Perempuan">Perempuan</option>
-                            </select>
+            <div className="grow w-full px-5 py-10">
+                <div className="w-full mx-auto">
+                    <form onSubmit={handleSubmit}>
+                        <div className='mb-5'>
+                            <label className='text-gray-600 text-sm font-semibold'>Nama Lengkap</label>
+                            <input
+                                type="text"
+                                name="fullName"
+                                required
+                                onChange={handleChange}
+                                className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-gray-100 bg-gray-50 focus:border-[#FEBD5A] transition-all"
+                                placeholder="Nama Lengkap"
+                            />
                         </div>
-
-                        <div>
-                            <label className='text-white text-sm'>Bidang</label>
-                            <select className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-[#FEBD5A] bg-white" name="role" value={form.role} onChange={handleChange}>
-                                <option value="Administrasi">Administrasi</option>
-                                <option value="Sales">Sales</option>
-                                <option value="Gudang">Admin Gudang</option>
-                            </select>
+        
+                        <div className='mb-5'>
+                            <label className='text-gray-600 text-sm font-semibold'>Nama Panggilan</label>
+                            <input
+                                type="text"
+                                name="nickName"
+                                required
+                                onChange={handleChange}
+                                className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-gray-100 bg-gray-50 focus:border-[#FEBD5A] transition-all"
+                                placeholder="Nama Panggilan"
+                            />
                         </div>
+        
+                        <div className='mb-5'>
+                            <label className='text-gray-600 text-sm font-semibold'>Email</label>
+                            <input
+                                type="email"
+                                name="email"
+                                required
+                                onChange={handleChange}
+                                className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-gray-100 bg-gray-50 focus:border-[#FEBD5A] transition-all"
+                                placeholder="example@gmail.com"
+                            />
+                        </div>
+        
+                        <div className='mb-5'>
+                            <label className='text-gray-600 text-sm font-semibold'>No. HP/Whatsapp</label>
+                            <input
+                                type="number"
+                                name="number"
+                                required
+                                onChange={handleChange}
+                                className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-gray-100 bg-gray-50 focus:border-[#FEBD5A] transition-all"
+                                placeholder="08xxxxxxxxxx"
+                            />
+                        </div>
+        
+                        <div className='grid grid-cols-2 gap-x-10 mb-10'>
+                                <div>
+                                    <label className='text-gray-600 text-sm font-semibold'>Jenis Kelamin</label>
+                                    <select className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-gray-100 bg-gray-50 focus:border-[#FEBD5A]" name="gender" value={form.gender} onChange={handleChange}>
+                                        <option value="Laki-Laki">Laki-Laki</option>
+                                        <option value="Perempuan">Perempuan</option>
+                                    </select>
+                                </div>
+        
+                                <div>
+                                    <label className='text-gray-600 text-sm font-semibold'>Bidang</label>
+                                    <select className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-gray-100 bg-gray-50 focus:border-[#FEBD5A]" name="role" value={form.role} onChange={handleChange}>
+                                        <option value="Administrasi">Administrasi</option>
+                                        <option value="Sales">Sales</option>
+                                        <option value="Gudang">Admin Gudang</option>
+                                    </select>
+                                </div>
+                        </div>
+        
+                        <button className='w-full text-white text-lg bg-[#FEBD5A] p-3 rounded-xl hover hover:bg-[#e69c2d]'>Lanjut Wawancara</button>
+                    </form>
                 </div>
-
-                <button className='w-full text-white text-lg bg-[#FEBD5A] p-3 rounded-xl hover hover:bg-[#e69c2d]'>Lanjut Wawancara</button>
-            </form>
+            </div>
         </div>
     )
 }
