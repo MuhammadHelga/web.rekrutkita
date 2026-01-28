@@ -153,8 +153,8 @@ function ChatInterview() {
     }, [messages]);
 
     return (
-        <div className='w-full flex flex-col bg-gray-50 min-h-screen'>
-            <div className='sticky top-0 w-full bg-[#0D3556] text-white px-6 py-4 text-lg font-semibold shadow-md z-10'>
+        <div className='w-full flex flex-col bg-gray-50 h-[100dvh] overflow-hidden relative'>
+            <div className='fixed top-0 left-0 w-full bg-[#0D3556] text-white px-6 py-4 text-lg font-semibold shadow-md z-50'>
                {isFinished ? "Wawancara telah Selesai" : "Proses Wawancara Dimulai"}
 
                 <div className="mt-2">
@@ -164,7 +164,7 @@ function ChatInterview() {
                 </div>
             </div>
 
-            <div className='flex-1 overflow-y-auto p-4 space-y-3'>
+            <div className='flex-1 overflow-y-auto p-4 space-y-3 pt-24 pb-20'>
                 {messages.map((msg) => (
                 <ChatBubble
                     key={msg.id}
