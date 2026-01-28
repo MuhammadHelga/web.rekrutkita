@@ -50,7 +50,7 @@ function FormPages() {
     return (
         <div className='h-screen w-full flex flex-col bg-white overflow-hidden font-sans'>
             <div className='bg-linear-to-b from-[#0D2B45] to-[#1a4b7a] w-full pt-10 pb-8 px-5 flex shrink-0'>
-                <div className="max-w-2xl mx-auto">
+                <div className="w-full">
                     <h1 className='text-white text-3xl font-bold tracking-[0.2em] mb-4'
                         >REKRUTMEN
                     </h1>
