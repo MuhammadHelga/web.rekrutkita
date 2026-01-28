@@ -61,7 +61,7 @@ function FormPages() {
                 </div>
             </div>
 
-            <div className="grow overflow-y-auto w-full px-5 py-10 scrollbar-hide">
+            <div className="grow overflow-y-auto w-full px-5 py-5 scrollbar-hide">
                 <div className="w-full mx-auto">
                     <form onSubmit={handleSubmit}>
                         <div className='mb-5'>
