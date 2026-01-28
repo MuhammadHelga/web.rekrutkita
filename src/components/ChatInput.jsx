@@ -8,7 +8,7 @@ function ChatInput({ value, onChange, onSend }) {
           value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder='Tulis Jawaban...'
-          className="flex-1 px-4 py-3 rounded-xl bg-white"
+          className="flex-1 px-4 py-3 rounded-xl bg-white border border-gray-300 outline-none"
         />
         <button 
           onClick={onSend}
