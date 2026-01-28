@@ -154,7 +154,7 @@ function ChatInterview() {
 
     return (
         <div className='fixed top-0 left-0 h-[100dvh] w-full flex flex-col overflow-hidden bg-gray-50'>
-            <div className='flex-none bg-[#0D3556] text-white px-6 py-4 text-lg font-semibold shadow-md z-10'>
+            <div className='fixed top-0 left-0 w-full bg-[#0D3556] text-white px-6 py-4 text-lg font-semibold shadow-md z-10'>
                {isFinished ? "Wawancara telah Selesai" : "Proses Wawancara Dimulai"}
 
                 <div className="mt-2">
