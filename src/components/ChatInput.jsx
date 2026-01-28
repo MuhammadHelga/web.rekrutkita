@@ -2,7 +2,7 @@ import React from 'react'
 
 function ChatInput({ value, onChange, onSend }) {
   return (
-    <div className='bg-[#5046E5] px-4 py-3 flex gap-3'>
+    <div className='bg-[#F9F9F9] px-4 py-3 flex gap-3 '>
         <input
           type='text'
           value={value}
