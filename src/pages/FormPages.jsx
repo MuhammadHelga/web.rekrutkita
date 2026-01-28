@@ -61,7 +61,7 @@ function FormPages() {
                 </div>
             </div>
 
-            <div className="grow w-full px-5 py-10">
+            <div className="grow overflow-y-auto w-full px-5 py-10 scrollbar-hide">
                 <div className="w-full mx-auto">
                     <form onSubmit={handleSubmit}>
                         <div className='mb-5'>
@@ -131,7 +131,7 @@ function FormPages() {
                                 </div>
                         </div>
         
-                        <button className='w-full text-white text-lg bg-[#FEBD5A] p-3 rounded-xl hover hover:bg-[#e69c2d]'>Lanjut Wawancara</button>
+                        <button className='w-full text-white text-lg bg-[#FEBD5A] p-3 rounded-xl hover hover:bg-[#e69c2d] shadow-lg active:scale-[0.98] transition-all'>Lanjut Wawancara</button>
                     </form>
                 </div>
             </div>
