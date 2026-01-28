@@ -4,6 +4,7 @@ import { sendFormData } from "../services/ApiRequests";
 
 function FormPages() {
     const navigate = useNavigate();
+    const [isLoading, setIsLoading] = useState(false);
 
     const [form, setForm] = useState({
         fullName: "",
@@ -25,6 +26,7 @@ function FormPages() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsLoading(true);
 
         const payload = {
             candidateId: generateCandidateId(),
@@ -44,6 +46,7 @@ function FormPages() {
             });
         } catch (error) {
             alert("Gagal mengirim data");
+            setIsLoading(false);
         }
     };
 
@@ -131,7 +134,14 @@ function FormPages() {
                                 </div>
                         </div>
         
-                        <button className='w-full text-white text-lg bg-[#FEBD5A] p-3 rounded-xl hover hover:bg-[#e69c2d] shadow-lg active:scale-[0.98] transition-all'>Lanjut Wawancara</button>
+                        <button 
+                            type="submit"
+                            disabled={isLoading}
+                            className={`w-full text-white text-lg p-3 rounded-xl shadow-lg transition-all 
+                                ${isLoading ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#FEBD5A] hover:bg-[#e69c2d] active:scale-[0.98]'}`}
+                        >
+                            {isLoading ? "Memulai..." : "Lanjut Wawancara"}
+                        </button>
                     </form>
                 </div>
             </div>
