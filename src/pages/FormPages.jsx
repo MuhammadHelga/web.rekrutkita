@@ -48,7 +48,7 @@ function FormPages() {
     };
 
     return (
-        <div className=' bg-[#5046E5] h-screen w-full items-center justify-center px-10 py-15'>
+        <div className=' bg-[#0D3556] h-screen w-full items-center justify-center px-10 py-15'>
             <div className='w-full bg-transparent'>
                 <h1 className='text-center text-white text-3xl font-bold mb-8'>REKRUTMEN</h1>
             </div>
