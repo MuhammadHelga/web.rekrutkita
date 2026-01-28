@@ -154,10 +154,14 @@ function ChatInterview() {
 
     return (
         <div className='fixed top-0 left-0 h-[100dvh] w-full flex flex-col overflow-hidden bg-gray-50'>
-            <div className={`flex-none bg-[#4B42D6] px-6 py-4 text-lg font-semibold shadow-md z-10 transition-colors duration-500 
-                ${ isFinished ? "text-[#22c55e]" : "text-[#FEBD5A]" }`
-            }>
+            <div className='flex-none bg-[#0D3556] px-6 py-4 text-lg font-semibold shadow-md z-10'>
                {isFinished ? "Wawancara telah Selesai" : "Proses Wawancara Dimulai"}
+            </div>
+
+            <div className="mt-2">
+                <div className={`h-[3px] w-16 rounded-full transition-all duration-500
+                    ${isFinished ? "bg-green-500" : "bg-yellow-400"}`}
+                />
             </div>
 
             <div className='flex-1 overflow-y-auto p-4 space-y-3'>
