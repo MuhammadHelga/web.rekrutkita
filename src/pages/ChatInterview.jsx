@@ -153,8 +153,9 @@ function ChatInterview() {
     }, [messages]);
 
     return (
-        <div className='w-full flex flex-col bg-gray-50 h-[100dvh] overflow-hidden relative'>
-            <div className='fixed top-0 left-0 w-full bg-[#0D3556] text-white px-6 py-4 text-lg font-semibold shadow-md z-50'>
+        <div className='fixed inset-0 flex flex-col bg-gray-50 overflow-hidden'
+            style={{ overscrollBehavior: 'none' }}>
+            <div className='fixed top-0 left-0 w-full bg-[#0D3556] text-white px-6 py-4 text-lg font-semibold shadow-md z-[100]'>
                {isFinished ? "Wawancara telah Selesai" : "Proses Wawancara Dimulai"}
 
                 <div className="mt-2">
@@ -177,7 +178,7 @@ function ChatInterview() {
             </div>
 
             {!isFinished && (
-                <div className='fixed bottom-0 left-0 w-full'>
+                <div className='fixed bottom-0 left-0 w-full bg-white z-50'>
                     <ChatInput
                         value={input}
                         onChange={setInput}
