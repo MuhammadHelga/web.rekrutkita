@@ -48,17 +48,17 @@ function FormPages() {
     };
 
     return (
-        <div className='min-h-screen flex flex-col bg-white'>
-            <div className='bg-linear-to-b from-[#0D2B45] to-[#1a4b7a] w-full pt-16 pb-12 px-5 flex flex-col'>
-                <h1 className='text-white text-3xl font-bold tracking-[0.2em] mb-4'
-                    >REKRUTMEN
-                </h1>
-
-                <p className="text-blue-100 max-w-md text-sm md:text-base mb-6">
-                    Silakan lengkapi formulir di bawah ini untuk memulai proses wawancara
-                </p>
-
-                <div className="w-16 h-1.5 bg-[#FEBD5A] rounded-full"></div>
+        <div className='h-screen w-full flex flex-col bg-white overflow-hidden font-sans'>
+            <div className='bg-linear-to-b from-[#0D2B45] to-[#1a4b7a] w-full pt-10 pb-8 px-5 flex shrink-0'>
+                <div className="max-w-2xl mx-auto">
+                    <h1 className='text-white text-3xl font-bold tracking-[0.2em] mb-4'
+                        >REKRUTMEN
+                    </h1>
+                    <p className="text-blue-100 max-w-md text-sm md:text-base mb-6">
+                        Silakan lengkapi formulir di bawah ini untuk memulai proses wawancara
+                    </p>
+                    <div className="w-16 h-1.5 bg-[#FEBD5A] rounded-full"></div>
+                </div>
             </div>
 
             <div className="grow w-full px-5 py-10">
