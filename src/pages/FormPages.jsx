@@ -54,7 +54,7 @@ function FormPages() {
                     <h1 className='text-white text-3xl font-bold tracking-[0.2em] mb-4'
                         >REKRUTMEN
                     </h1>
-                    <p className="text-blue-100 text-sm md:text-base mb-6 whitespace-nowrap md:whitespace-normal">
+                    <p className="text-blue-100 text-sm md:text-base mb-6 whitespace-normal md:whitespace-nowrap">
                         Silakan lengkapi formulir di bawah ini untuk memulai proses wawancara
                     </p>
                     <div className="w-16 h-1.5 bg-[#FEBD5A] rounded-full"></div>
