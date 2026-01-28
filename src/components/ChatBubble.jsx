@@ -10,7 +10,7 @@ function ChatBubble({ text, sender, time }) {
         <div
             className={`max-w-[75%] p-4 rounded-2xl ${
             isUser
-                ? "bg-[#4F46E5] text-white"
+                ? "bg-[#0D3556] text-white"
                 : "bg-gray-200 text-gray-800"
             }`}
         >
