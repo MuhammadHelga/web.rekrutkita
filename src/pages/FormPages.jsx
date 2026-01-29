@@ -52,8 +52,8 @@ function FormPages() {
 
     return (
         <div className='min-h-[100dvh] w-full flex flex-col bg-white overflow-hidden font-sans'>
-            <div className='bg-linear-to-b from-[#0D2B45] to-[#1a4b7a] w-full pt-10 pb-8 px-6 flex shrink-0 justify-center'>
-                <div className="w-full max-w-2xl">
+            <div className='bg-linear-to-b from-[#0D2B45] to-[#1a4b7a] w-full pt-6 pb-5 px-5 flex shrink-0'>
+                <div className="w-full">
                     <h1 className='text-white text-3xl md:text-2xl font-bold tracking-[0.2em] mb-2'
                         >REKRUTMEN
                     </h1>
@@ -64,8 +64,8 @@ function FormPages() {
                 </div>
             </div>
 
-            <div className="flex-1 w-full px-6 py-10 flex flex-col items-center overflow-y-auto scrollbar-hide">
-                <div className="w-full max-w-md bg-white p-0 md:p-8 md:shadow-sm md:rounded-2xl">
+            <div className="flex-1 overflow-y-auto w-full px-5 py-4 flex flex-col justify-center scrollbar-hide">
+                <div className="w-full mx-auto max-w-md">
                     <form onSubmit={handleSubmit} className="space-y-3">
                         <div className='flex flex-col'>
                             <label className='text-gray-600 text-[12px] font-semibold ml-1'>Nama Lengkap</label>
