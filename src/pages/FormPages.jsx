@@ -64,7 +64,7 @@ function FormPages() {
                 </div>
             </div>
 
-            <div className="flex-1 overflow-y-auto w-full px-5 py-4 md:py-2 sm:py-2 flex flex-col scrollbar-hide">
+            <div className="flex-1 overflow-y-auto w-full px-5 py-4 flex flex-col scrollbar-hide">
                 <div className="w-full mx-auto">
                     <form onSubmit={handleSubmit} className="space-y-3">
                         <div className='flex flex-col'>
