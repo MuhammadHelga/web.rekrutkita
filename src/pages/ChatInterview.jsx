@@ -154,8 +154,7 @@ function ChatInterview() {
     }, [messages]);
 
     return (
-        <div className='fixed inset-0 flex flex-col bg-gray-50 overflow-hidden'
-            style={{ overscrollBehavior: 'none' }}>
+        <div className='h-[100dvh] w-full flex flex-col bg-gray-50 overflow-hidden relative'>
             
             <ChatHeader isFinished={isFinished} />
 
