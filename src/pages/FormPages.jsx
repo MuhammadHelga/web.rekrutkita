@@ -51,10 +51,10 @@ function FormPages() {
     };
 
     return (
-        <div className='h-screen w-full flex flex-col bg-white overflow-hidden font-sans'>
-            <div className='bg-linear-to-b from-[#0D2B45] to-[#1a4b7a] w-full pt-10 pb-8 px-5 flex shrink-0'>
+        <div className='min-h-[100dvh] w-full flex flex-col bg-white overflow-hidden font-sans'>
+            <div className='bg-linear-to-b from-[#0D2B45] to-[#1a4b7a] w-full pt-6 pb-5 px-5 flex shrink-0'>
                 <div className="w-full">
-                    <h1 className='text-white text-3xl font-bold tracking-[0.2em] mb-4'
+                    <h1 className='text-white text-3xl md:text-2xl font-bold tracking-[0.2em] mb-2'
                         >REKRUTMEN
                     </h1>
                     <p className="text-blue-100 text-sm md:text-base mb-6 whitespace-normal md:whitespace-nowrap">
@@ -64,84 +64,86 @@ function FormPages() {
                 </div>
             </div>
 
-            <div className="grow overflow-y-auto w-full px-5 py-5 scrollbar-hide">
-                <div className="w-full mx-auto">
-                    <form onSubmit={handleSubmit}>
-                        <div className='mb-5'>
-                            <label className='text-gray-600 text-sm font-semibold'>Nama Lengkap</label>
+            <div className="flex-1 overflow-y-auto w-full px-5 py-4 flex flex-col justify-center scrollbar-hide">
+                <div className="w-full mx-auto max-w-md">
+                    <form onSubmit={handleSubmit} className="space-y-3">
+                        <div className='flex flex-col'>
+                            <label className='text-gray-600 text-[12px] font-semibold ml-1'>Nama Lengkap</label>
                             <input
                                 type="text"
                                 name="fullName"
                                 required
                                 onChange={handleChange}
-                                className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-gray-100 bg-gray-50 focus:border-[#FEBD5A] transition-all"
+                                className="w-full mt-1 p-2.5 rounded-xl outline-none border-2 border-gray-100 bg-gray-50 focus:border-[#FEBD5A] transition-all text-sm"
                                 placeholder="Nama Lengkap"
                             />
                         </div>
         
-                        <div className='mb-5'>
-                            <label className='text-gray-600 text-sm font-semibold'>Nama Panggilan</label>
+                        <div className='flex flex-col'>
+                            <label className='text-gray-600 text-[12px] font-semibold ml-1'>Nama Panggilan</label>
                             <input
                                 type="text"
                                 name="nickName"
                                 required
                                 onChange={handleChange}
-                                className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-gray-100 bg-gray-50 focus:border-[#FEBD5A] transition-all"
+                                className="w-full mt-1 p-2.5 rounded-xl outline-none border-2 border-gray-100 bg-gray-50 focus:border-[#FEBD5A] transition-all text-sm"
                                 placeholder="Nama Panggilan"
                             />
                         </div>
         
-                        <div className='mb-5'>
-                            <label className='text-gray-600 text-sm font-semibold'>Email</label>
+                        <div className='flex flex-col'>
+                            <label className='text-gray-600 text-[12px] font-semibold ml-1'>Email</label>
                             <input
                                 type="email"
                                 name="email"
                                 required
                                 onChange={handleChange}
-                                className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-gray-100 bg-gray-50 focus:border-[#FEBD5A] transition-all"
+                                className="w-full mt-1 p-2.5 rounded-xl outline-none border-2 border-gray-100 bg-gray-50 focus:border-[#FEBD5A] transition-all text-sm"
                                 placeholder="example@gmail.com"
                             />
                         </div>
         
-                        <div className='mb-5'>
-                            <label className='text-gray-600 text-sm font-semibold'>No. HP/Whatsapp</label>
+                        <div className='flex flex-col'>
+                            <label className='text-gray-600 text-[12px] font-semibold ml-1'>No. HP/Whatsapp</label>
                             <input
                                 type="number"
                                 name="number"
                                 required
                                 onChange={handleChange}
-                                className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-gray-100 bg-gray-50 focus:border-[#FEBD5A] transition-all"
+                                className="w-full mt-1 p-2.5 rounded-xl outline-none border-2 border-gray-100 bg-gray-50 focus:border-[#FEBD5A] transition-all text-sm"
                                 placeholder="08xxxxxxxxxx"
                             />
                         </div>
         
-                        <div className='grid grid-cols-2 gap-x-10 mb-10'>
+                        <div className='grid grid-cols-2 gap-x-4'>
                                 <div>
-                                    <label className='text-gray-600 text-sm font-semibold'>Jenis Kelamin</label>
-                                    <select className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-gray-100 bg-gray-50 focus:border-[#FEBD5A]" name="gender" value={form.gender} onChange={handleChange}>
+                                    <label className='text-gray-600 text-[12px] font-semibold ml-1'>Jenis Kelamin</label>
+                                    <select className="w-full mt-1 p-2.5 rounded-xl outline-none border-2 border-gray-100 bg-gray-50 focus:border-[#FEBD5A] text-sm" name="gender" value={form.gender} onChange={handleChange}>
                                         <option value="Laki-Laki">Laki-Laki</option>
                                         <option value="Perempuan">Perempuan</option>
                                     </select>
                                 </div>
         
                                 <div>
-                                    <label className='text-gray-600 text-sm font-semibold'>Bidang</label>
-                                    <select className="w-full mt-1 p-3 rounded-xl outline-none border-2 border-gray-100 bg-gray-50 focus:border-[#FEBD5A]" name="role" value={form.role} onChange={handleChange}>
+                                    <label className='text-gray-600 text-[12px] font-semibold ml-1'>Bidang</label>
+                                    <select className="w-full mt-1 p-2.5 rounded-xl outline-none border-2 border-gray-100 bg-gray-50 focus:border-[#FEBD5A] text-sm" name="role" value={form.role} onChange={handleChange}>
                                         <option value="Administrasi">Administrasi</option>
                                         <option value="Sales">Sales</option>
                                         <option value="Gudang">Admin Gudang</option>
                                     </select>
                                 </div>
                         </div>
-        
-                        <button 
-                            type="submit"
-                            disabled={isLoading}
-                            className={`w-full text-white text-lg p-3 rounded-xl shadow-lg transition-all 
-                                ${isLoading ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#FEBD5A] hover:bg-[#e69c2d] active:scale-[0.98]'}`}
-                        >
-                            {isLoading ? "Memulai..." : "Lanjut Wawancara"}
-                        </button>
+
+                        <div className="pt-2">
+                            <button 
+                                type="submit"
+                                disabled={isLoading}
+                                className={`w-full text-white text-md font-bold p-3 rounded-xl shadow-md transition-all 
+                                    ${isLoading ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#FEBD5A] hover:bg-[#e69c2d] active:scale-[0.98]'}`}
+                            >
+                                {isLoading ? "Memulai..." : "Lanjut Wawancara"}
+                            </button>
+                         </div>
                     </form>
                 </div>
             </div>
