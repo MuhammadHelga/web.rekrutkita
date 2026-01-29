@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import ChatBubble from '../components/ChatBubble'
 import ChatInput from '../components/ChatInput'
+import ChatHeader from '../components/ChatHeader';
 import { getInterview, saveAnswer, finishInterview } from "../services/ApiRequests";
 
 function ChatInterview() {
@@ -155,15 +156,8 @@ function ChatInterview() {
     return (
         <div className='fixed inset-0 flex flex-col bg-gray-50 overflow-hidden'
             style={{ overscrollBehavior: 'none' }}>
-            <div className='fixed top-0 left-0 w-full bg-[#0D3556] text-white px-6 py-4 text-lg font-semibold shadow-md z-[100]'>
-               {isFinished ? "Wawancara telah Selesai" : "Proses Wawancara Dimulai"}
-
-                <div className="mt-2">
-                    <div className={`h-[3px] w-16 rounded-full transition-all duration-500
-                        ${isFinished ? "bg-green-500" : "bg-yellow-400"}`}
-                    />
-                </div>
-            </div>
+            
+            <ChatHeader isFinished={isFinished} />
 
             <div className='flex-1 overflow-y-auto p-4 space-y-3 pt-24 pb-20'>
                 {messages.map((msg) => (
