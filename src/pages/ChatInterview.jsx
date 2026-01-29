@@ -171,7 +171,7 @@ function ChatInterview() {
             </div>
 
             {!isFinished && (
-                <div className='fixed bottom-0 left-0 w-full bg-white z-50'>
+                <div className='w-full bg-white z-50'>
                     <ChatInput
                         value={input}
                         onChange={setInput}
