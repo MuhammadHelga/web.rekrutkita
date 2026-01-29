@@ -65,7 +65,7 @@ function FormPages() {
             </div>
 
             <div className="flex-1 overflow-y-auto w-full px-5 py-4 flex flex-col justify-center scrollbar-hide">
-                <div className="w-full mx-auto max-w-md">
+                <div className="w-full mx-auto">
                     <form onSubmit={handleSubmit} className="space-y-3">
                         <div className='flex flex-col'>
                             <label className='text-gray-600 text-[12px] font-semibold ml-1'>Nama Lengkap</label>
