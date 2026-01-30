@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import ChatBubble from '../components/ChatBubble'
 import ChatInput from '../components/ChatInput'
 import ChatHeader from '../components/ChatHeader';
+import ButtonFinish from "../components/ButtonFinish";
 import { getInterview, saveAnswer, finishInterview } from "../services/ApiRequests";
 
 function ChatInterview() {
@@ -170,7 +171,7 @@ function ChatInterview() {
                 <div ref={chatEndRef} />
             </div>
 
-            {!isFinished && (
+            {!isFinished ? (
                 <div className='w-full bg-white z-50'>
                     <ChatInput
                         value={input}
@@ -178,6 +179,8 @@ function ChatInterview() {
                         onSend={sendMessage}
                     />
                 </div>
+            ) : (
+                <ButtonFinish />
             )}
         </div>
     )
