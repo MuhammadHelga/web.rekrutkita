@@ -23,6 +23,7 @@ function ChatInput({ value, onChange, onSend }) {
     <div className='bg-[#F9F9F9] px-4 py-3 flex gap-3 shadow-[0_-4px_10px_rgba(0,0,0,0.05)]'>
         <textarea
           ref={textareaRef}
+          type="text"
           value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder='Tulis Jawaban...'
