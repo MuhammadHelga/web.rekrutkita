@@ -14,7 +14,7 @@ function ChatBubble({ text, sender, time }) {
                 : "bg-gray-200 text-gray-800"
             }`}
         >
-            <p className="text-sm">{text}</p>
+            <p className="text-sm leading-relaxed break-words">{text}</p>
             {time && (
             <div
                 className={`text-[10px] mt-1 text-right ${
