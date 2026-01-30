@@ -128,7 +128,7 @@ function ChatInterview() {
                     {
                         id: "done",
                         sender: "ai",
-                        text: "Terima kasih sudah mengikuti wawancara. Wawancara telah selesai. Silahkan menunggu kabar berikutnya 😊🙏",
+                        text: "Terima kasih sudah mengikuti wawancara. Wawancara telah selesai. Data Anda telah disimpan. Silahkan menunggu kabar berikutnya 😊🙏",
                         time: getTime(),
                     },
                 ]);
