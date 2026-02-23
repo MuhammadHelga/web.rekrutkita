@@ -5,7 +5,7 @@ function FinishButton() {
   const navigate = useNavigate();
 
   const handleFinish = () => {
-    navigate("/");
+    navigate("/", {replace: true});
   };
 
   return (
