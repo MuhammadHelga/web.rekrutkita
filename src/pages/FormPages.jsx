@@ -35,7 +35,7 @@ function FormPages() {
 
         try {
             await sendFormData(payload);
-            navigate("/wawancara", {
+            navigate("/verify-token", {
                 state: {
                 userName: form.nickName || form.fullName,
                 fullName: form.fullName,
